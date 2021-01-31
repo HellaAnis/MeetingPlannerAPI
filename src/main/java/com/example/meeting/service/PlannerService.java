@@ -42,8 +42,7 @@ public class PlannerService implements Service {
                     .map(Meeting::getMeetingDepartureTime)
                     .collect(Collectors.toSet());
 
-            if (isSameTypeMeeting(meeting, room))
-            {
+            if (isSameTypeMeeting(meeting, room)) {
                 if (isNotOccupied(meeting, allRoomMeeting) //todo capacite
                         && meeting.getPeopleOfMeeting() <= (int) calculatePercentage(room.getCapacity())) {
                     room.getReservationSlots().add(meeting);
@@ -54,7 +53,7 @@ public class PlannerService implements Service {
 
         }
 
-        if (roomMeeting == null){
+        if (roomMeeting == null) {
             for (Room room : sortedRooms) {
                 Set<LocalTime> allRoomMeeting = room.getReservationSlots()
                         .stream()
@@ -68,18 +67,7 @@ public class PlannerService implements Service {
                             && meeting.getPeopleOfMeeting() <= (int) calculatePercentage(room.getCapacity())) {
                         room.getReservationSlots().add(meeting);
                         roomMeeting = room;
-                        for (Hardware hardware : missingEquipment) {
-                            for (ExtraHardware extraHardware : extraHardwares
-                                    .stream()
-                                    .filter(h -> !h.getMeetings().contains(meeting.getMeetingDepartureTime()))
-                                    .collect(Collectors.toSet())) {
-                                if (extraHardware.getHardware().equals(hardware)) {
-                                    extraHardware.getMeetings().add(meeting.getMeetingDepartureTime());
-                                    break;
-                                }
-                            }
-                        }
-                        room.getReservationSlots().add(meeting);
+                        reserveMissingEquipment(meeting,missingEquipment);
                         break;
                     }
                 }
@@ -89,6 +77,21 @@ public class PlannerService implements Service {
         if (roomMeeting == null)
             log.info("Toutes les salles sont occupées, impossible de faire réservation pour la réunion : " + meeting.getName());
         return roomMeeting;
+    }
+
+    private void reserveMissingEquipment(Meeting meeting, List<Hardware> missingEquipment) {
+        List<ExtraHardware> extraHardwaresNotOccupied = extraHardwares
+                .stream()
+                .filter(h -> !h.getMeetings().contains(meeting.getMeetingDepartureTime()))
+                .collect(Collectors.toList());
+        for (Hardware hardware : missingEquipment) {
+            for (ExtraHardware extraHardware : extraHardwaresNotOccupied) {
+                if (extraHardware.getHardware().equals(hardware)) {
+                    extraHardware.getMeetings().add(meeting.getMeetingDepartureTime());
+                    break;
+                }
+            }
+        }
     }
 
     private boolean isSameTypeMeeting(Meeting meeting, Room room) {
