@@ -1,6 +1,7 @@
-package com.example.meeting;
+package com.example.meeting.domain;
 
-import java.time.LocalTime;
+import com.example.meeting.domain.Hardware;
+import com.example.meeting.domain.Meeting;
 
 import java.util.Set;
 

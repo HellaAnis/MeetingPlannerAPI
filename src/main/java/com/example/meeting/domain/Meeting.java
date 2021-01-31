@@ -1,4 +1,4 @@
-package com.example.meeting;
+package com.example.meeting.domain;
 
 import java.time.LocalTime;
 

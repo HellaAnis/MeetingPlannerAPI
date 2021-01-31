@@ -1,4 +1,4 @@
-package com.example.meeting;
+package com.example.meeting.domain;
 
 public enum Hardware {
     PIEUVRE, SCREEN, WEBCAM, BOARD, NEANT

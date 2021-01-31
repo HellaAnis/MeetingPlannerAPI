@@ -1,0 +1,264 @@
+POST http://localhost:8080/room/meeting
+Content-Type: application/json
+
+{
+  "name": "Réunion 1",
+  "localTime": "09:00:00",
+  "type": "VC",
+  "peopleOfMeeting": 8
+}
+
+
+###
+POST http://localhost:8080/room/meeting
+Content-Type: application/json
+
+{
+  "name": "Réunion 2",
+  "localTime": "09:00:00",
+  "type": "VC",
+  "peopleOfMeeting": 6
+}
+
+
+
+###
+POST http://localhost:8080/room/meeting
+Content-Type: application/json
+
+{
+  "name": "Réunion 3",
+  "localTime": "11:00:00",
+  "type": "RC",
+  "peopleOfMeeting": 4
+}
+
+
+
+###
+POST http://localhost:8080/room/meeting
+Content-Type: application/json
+
+{
+  "name": "Réunion 4",
+  "localTime": "11:00:00",
+  "type": "RS",
+  "peopleOfMeeting": 2
+}
+
+
+
+###
+POST http://localhost:8080/room/meeting
+Content-Type: application/json
+
+{
+  "name": "Réunion 5",
+  "localTime": "11:00:00",
+  "type": "SPEC",
+  "peopleOfMeeting": 9
+}
+
+
+
+
+###
+
+POST http://localhost:8080/room/meeting
+Content-Type: application/json
+
+{
+  "name": "Réunion 6",
+  "localTime": "08:00:00",
+  "type": "RC",
+  "peopleOfMeeting": 7
+}
+
+
+
+
+###
+POST http://localhost:8080/room/meeting
+Content-Type: application/json
+
+{
+  "name": "Réunion 7",
+  "localTime": "08:00:00",
+  "type": "VC",
+  "peopleOfMeeting": 9
+}
+
+
+
+
+###
+POST http://localhost:8080/room/meeting
+Content-Type: application/json
+
+{
+  "name": "Réunion 8",
+  "localTime": "08:00:00",
+  "type": "SPEC",
+  "peopleOfMeeting": 10
+}
+
+
+
+
+
+###
+POST http://localhost:8080/room/meeting
+Content-Type: application/json
+
+{
+  "name": "Réunion 9",
+  "localTime": "09:00:00",
+  "type": "SPEC",
+  "peopleOfMeeting": 5
+}
+
+
+
+###
+POST http://localhost:8080/room/meeting
+Content-Type: application/json
+
+{
+  "name": "Réunion 10",
+  "localTime": "09:00:00",
+  "type": "RS",
+  "peopleOfMeeting": 4
+}
+
+
+
+
+###
+POST http://localhost:8080/room/meeting
+Content-Type: application/json
+
+{
+  "name": "Réunion 11",
+  "localTime": "09:00:00",
+  "type": "RC",
+  "peopleOfMeeting": 8
+}
+
+
+
+###
+POST http://localhost:8080/room/meeting
+Content-Type: application/json
+
+{
+  "name": "Réunion 12",
+  "localTime": "11:00:00",
+  "type": "VC",
+  "peopleOfMeeting": 12
+}
+
+
+
+###
+POST http://localhost:8080/room/meeting
+Content-Type: application/json
+
+{
+  "name": "Réunion 13",
+  "localTime": "11:00:00",
+  "type": "SPEC",
+  "peopleOfMeeting": 5
+}
+
+
+
+###
+POST http://localhost:8080/room/meeting
+Content-Type: application/json
+
+{
+  "name": "Réunion 14",
+  "localTime": "08:00:00",
+  "type": "VC",
+  "peopleOfMeeting": 3
+}
+
+
+
+###
+POST http://localhost:8080/room/meeting
+Content-Type: application/json
+
+{
+  "name": "Réunion 15",
+  "localTime": "08:00:00",
+  "type": "SPEC",
+  "peopleOfMeeting": 2
+}
+
+
+
+###
+POST http://localhost:8080/room/meeting
+Content-Type: application/json
+
+{
+  "name": "Réunion 16",
+  "localTime": "08:00:00",
+  "type": "VC",
+  "peopleOfMeeting": 12
+}
+
+
+
+###
+POST http://localhost:8080/room/meeting
+Content-Type: application/json
+
+{
+  "name": "Réunion 17",
+  "localTime": "10:00:00",
+  "type": "VC",
+  "peopleOfMeeting": 6
+}
+
+
+
+###
+POST http://localhost:8080/room/meeting
+Content-Type: application/json
+
+{
+  "name": "Réunion 18",
+  "localTime": "11:00:00",
+  "type": "RS",
+  "peopleOfMeeting": 2
+}
+
+
+###
+POST http://localhost:8080/room/meeting
+Content-Type: application/json
+
+{
+  "name": "Réunion 19",
+  "localTime": "09:00:00",
+  "type": "RS",
+  "peopleOfMeeting": 4
+}
+
+
+
+###
+POST http://localhost:8080/room/meeting
+Content-Type: application/json
+
+{
+  "name": "Réunion 20",
+  "localTime": "09:00:00",
+  "type": "RC",
+  "peopleOfMeeting": 7
+}
+
+
+
